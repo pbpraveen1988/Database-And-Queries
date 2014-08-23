@@ -1,0 +1,97 @@
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+C:\Users\Techie\Desktop\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+E:\Stack Infote\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+G:\Sushant\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+C:\Users\Praveen\Desktop\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+F:\SUMEN\ERP\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
+E:\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\DatabaseAndQueries.pdb
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.InnerJoinFetch.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\FluentNHibernate.xml
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\Iesi.Collections.xml
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.xml
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\bin\Debug\NHibernate.Linq.xml
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.csprojResolveAssemblyReference.cache
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.dll
+E:\Stack Infotech\EducationERP\trunk\EducationERP\DatabaseAndQueries\obj\Debug\DatabaseAndQueries.pdb
