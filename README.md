@@ -11,9 +11,10 @@
 <br>
 Technical Specifications:<br>
 <br>
-As you can see, there are two classes : 1) Queries.cs <br>
-                                        2) SessionFactory.cs<br>
-                                        <br>
+As you can see, there are two classes : <br>
+1) Queries.cs <br>
+2) SessionFactory.cs <br>
+<br>
  <b><u>SessionFactory.cs: </u></b><br>
             This is the Main File or Configuration File , We have to set the Few Paramters here to Connect the Database <br>
             like Hostname,Database Name, Database password , Database Type (which we have to use like Mysql,MS sql etc.)<br>
