@@ -28,7 +28,7 @@ As you can see, there are two classes : <br>
             NameSpaceM : Namespace of the Models only (if Automapping is true then only).<br>
             AutoMapping : True or False<br>
 <br>
-Queries.cs :<br>
+ <b><u>Queries.cs : </u></b><br>
             In this file we write the Complete queries for CRUD operations and also with Multiple Conditions ,Order By, Sort By etc.<br>
             You can see the example in Attached Example Project.<br>
             
