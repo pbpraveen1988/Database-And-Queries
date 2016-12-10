@@ -53,8 +53,26 @@ We created the Windows Desktop for Example, we put the code in Program.cs, we ha
    _user.Name = textBox1.Text;<br>
    Queries.Add&lt;User&gt;(_user);<br>
    <br>
-   
-   
+   <br>
+   Delete the data<br>
+   ------------<br>
+   Queries.Delete&lt;User&gt;(_user);<br>
+   <br>
+   Get Data by Condition<br>
+   --------------------<br>
+   Queries.GetDataByCondition&lt;User&gt;(x => x.Name == "John doe");<br>
+<br>
+   Retrieve all Rows from database<br>
+   -------------------------------<br>
+   Queries.GetAllData&lt;User&gt;();<br>
+<br>
+   Update the particular Row<br>
+   ---------------------------<br>
+   Queries.Update&lt;User&gt;(_user);<br>
+<br>
+   Check the data exists or not <br>
+   --------------------------------<br>
+   Queries.IsExists&lt;User&gt;(x => x.Name == "John doe");
    
    
  
