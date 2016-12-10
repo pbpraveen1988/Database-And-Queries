@@ -33,6 +33,34 @@ As you can see, there are two classes : <br>
             You can see the example in Attached Example Project.<br>
             
             
+<b>Example With Mysql </b><br>
+<br>
+We created the Windows Desktop for Example, we put the code in Program.cs, we have to initialize on Start of project.<br>
+<br>
+ DatabaseAndQueries.SessionFactory.DatabaseType = DatabaseAndQueries.DBTYPE.MySql.ToString();<br>
+ DatabaseAndQueries.SessionFactory.DatabaseHost = "localhost";<br>
+ DatabaseAndQueries.SessionFactory.DatabaseName = "TestGithub";<br>
+ DatabaseAndQueries.SessionFactory.DatabasePassword = "123456";<br>
+ DatabaseAndQueries.SessionFactory.DatabaseUser = "root";<br>
+ DatabaseAndQueries.SessionFactory.NameSpaceM = "Example.Models";<br>
+ DatabaseAndQueries.SessionFactory.AutoMapping = true;<br>
+ DatabaseAndQueries.SessionFactory.AssemblyName = System.Reflection.Assembly.GetExecutingAssembly().ToString();<br>
+ <br>
+ <br>
+ Insert data in to table <br>
+ -----------------------<br>
+   User _user = new User();<br>
+   _user.Name = textBox1.Text;<br>
+   Queries.Add&lt;User&gt;(_user);<br>
+   <br>
+   
+   
+   
+   
+ 
+ 
+
+
 
                                         
 
