@@ -1,8 +1,12 @@
-﻿using FluentNHibernate.Cfg;
+﻿using FluentNHibernate.Automapping;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Conventions.Helpers;
+using NHibernate.Cfg;
+using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -12,7 +16,9 @@ namespace DatabaseAndQueries
 {
     public class SessionFactory
     {
+
         private static NHibernate.ISessionFactory sFactory;
+        public static string FilePath { get; set; }
 
         public static string DatabaseName { get; set; }
         public static string DatabaseHost { get; set; }
@@ -20,6 +26,8 @@ namespace DatabaseAndQueries
         public static string DatabasePassword { get; set; }
         public static string DatabaseType { get; set; }
         public static string AssemblyName { get; set; }
+        public static string NameSpaceM { get; set; }
+        public static bool AutoMapping { get; set; }
 
         public SessionFactory(string DBName, string DBHost, string DBType, string DBUser, string DBPassword, string ProjectName)
         {
@@ -36,54 +44,117 @@ namespace DatabaseAndQueries
             try
             {
 
+                if (!AutoMapping)
+                {
+                    switch (DatabaseType)
+                    {
+                        case "MySql":
+                            var mysqlconfig = MySQLConfiguration.Standard.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(mysqlconfig)
+                          .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
+                          .BuildSessionFactory();
+                            break;
 
-                if (DatabaseType == DBTYPE.MySql.ToString())
-                {
-                    var ConfigurationString = MySQLConfiguration.Standard.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
-                    sFactory = sFactory = Fluently.Configure().Database(ConfigurationString)
-                      .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
-                      .BuildSessionFactory();
+                        case "MsSql2005":
+                            var ConfigurationString = MsSqlConfiguration.MsSql2005.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString)
+                              .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
+                              .BuildSessionFactory();
+                            break;
 
-                    //Fluently.Configure()
-                    //            .Database(ConfigurationString)
-                    //            .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)).Conventions.Add(
-                    //             ForeignKey.Format((x, y) =>
-                    //             String.Concat(y.Name, "Id"))))
-                    //            .BuildSessionFactory();
+                        case "MsSql2008":
+                            var ConfigurationString1 = MsSqlConfiguration.MsSql2008.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString1)
+                              .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
+                              .BuildSessionFactory();
+                            break;
 
-                }
-                else if (DatabaseType == DBTYPE.MsSql2005.ToString())
-                {
-                    var ConfigurationString = MsSqlConfiguration.MsSql2005.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
-                    sFactory = Fluently.Configure().Database(ConfigurationString)
-                      .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
-                      .BuildSessionFactory();
-                }
-                else if (DatabaseType == DBTYPE.MsSql2008.ToString())
-                {
-                    var ConfigurationString = MsSqlConfiguration.MsSql2008.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
-                    sFactory = Fluently.Configure().Database(ConfigurationString)
-                      .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
-                      .BuildSessionFactory();
-                }
-                else if (DatabaseType == DBTYPE.MsSql2012.ToString())
-                {
-                    var ConfigurationString = MsSqlConfiguration.MsSql2012.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
-                    sFactory = Fluently.Configure().Database(ConfigurationString)
-                      .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
-                      .BuildSessionFactory();
-                }
-                else if (DatabaseType == DBTYPE.Oracle.ToString())
-                {
+                        case "MsSql2012":
+                            var ConfigurationString2 = MsSqlConfiguration.MsSql2012.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString2)
+                              .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
+                              .BuildSessionFactory();
+                            break;
 
-                }
-                else if (DatabaseType == DBTYPE.PostGreSql.ToString())
-                {
+                        case "Oracle": break;
+                        case "PostGreSql": break;
+                        case "SqlLite":
+                            sFactory = Fluently.Configure()
+                                         .Database(
+                                         SQLiteConfiguration.Standard
+                                         .UsingFile(FilePath))
+                                         .Mappings(m =>
+                                              m.FluentMappings.AddFromAssembly(Assembly.LoadWithPartialName(AssemblyName)))
+                                        // .ExposeConfiguration(BuildSchema)
+                                         .BuildSessionFactory();
+                            break;
+                        case "MSAccess":
+                             // JetDriverConfiguration.Standard.C
 
+                              
+                            
+                            break;
+                    }
                 }
-                else if (DatabaseType == DBTYPE.SqlLite.ToString())
+                else
                 {
 
+                    switch (DatabaseType)
+                    {
+                        case "MySql":
+                            var mysqlconfig = MySQLConfiguration.Standard.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                          sFactory =  Fluently.Configure().Database(mysqlconfig)
+                            .Mappings(m => m.AutoMappings.Add(AutoMap.Assembly(
+                            Assembly.LoadWithPartialName(AssemblyName))
+                            .UseOverridesFromAssembly
+                            (Assembly.LoadWithPartialName(AssemblyName)).Where(t => t.Namespace == NameSpaceM)))
+                            .BuildSessionFactory();
+                            break;
+
+                        case "MsSql2005":
+                            var ConfigurationString = MsSqlConfiguration.MsSql2005.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString)
+                            .Mappings(m => m.AutoMappings.Add(AutoMap.Assembly(
+                            Assembly.LoadWithPartialName(AssemblyName))
+                            .UseOverridesFromAssembly
+                            (Assembly.LoadWithPartialName(AssemblyName)).Where(t => t.Namespace == NameSpaceM)))
+                            .BuildSessionFactory();
+                            break;
+
+                        case "MsSql2008":
+                            var ConfigurationString1 = MsSqlConfiguration.MsSql2008.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString1)
+                              .Mappings(m => m.AutoMappings.Add(AutoMap.Assembly(
+                              Assembly.LoadWithPartialName(AssemblyName))
+                              .UseOverridesFromAssembly
+                              (Assembly.LoadWithPartialName(AssemblyName)).Where(t => t.Namespace == NameSpaceM)))
+                              .BuildSessionFactory();
+                            break;
+
+                        case "MsSql2012":
+                            var ConfigurationString2 = MsSqlConfiguration.MsSql2012.ConnectionString(c => c.Is("Data Source=" + DatabaseHost + ";User ID=" + DatabaseUser + ";Password=" + DatabasePassword + ";persist security info=False;initial catalog=" + DatabaseName + ";charset=utf8;"));
+                            sFactory = Fluently.Configure().Database(ConfigurationString2)
+                              .Mappings(m => m.AutoMappings.Add(AutoMap.Assembly(
+                              Assembly.LoadWithPartialName(AssemblyName))
+                              .UseOverridesFromAssembly
+                              (Assembly.LoadWithPartialName(AssemblyName)).Where(t => t.Namespace == NameSpaceM)))
+                              .BuildSessionFactory();
+                            break;
+
+                        case "Oracle": break;
+                        case "PostGreSql": break;
+                        case "SqlLite":
+                            var sqliteconfig = SQLiteConfiguration.Standard.UsingFile(FilePath);
+                            sFactory = Fluently.Configure().Database(sqliteconfig)
+                            .Mappings(m => m.AutoMappings.Add(AutoMap.Assembly(
+                            Assembly.LoadWithPartialName(AssemblyName))
+                            .UseOverridesFromAssembly
+                            (Assembly.LoadWithPartialName(AssemblyName)).Where(t => t.Namespace == NameSpaceM)))
+                            .BuildSessionFactory();
+                            break;
+
+                        case "MSAccess": break;
+                    }
                 }
             }
             catch (Exception ex)
@@ -97,7 +168,19 @@ namespace DatabaseAndQueries
             {
                 if (!string.IsNullOrEmpty(DatabaseType))
                 {
-                    if (!string.IsNullOrEmpty(DatabaseHost))
+                    if (DatabaseType == DBTYPE.SqlLite.ToString())
+                    {
+                        if (string.IsNullOrEmpty(FilePath))
+                        {
+                            throw new Exception("FilePath is not Defined");
+                        }
+                        else
+                        {
+                            Init();
+                        }
+                    }
+
+                    else if (!string.IsNullOrEmpty(DatabaseHost))
                     {
                         if (!string.IsNullOrEmpty(DatabaseName))
                         {
@@ -144,6 +227,16 @@ namespace DatabaseAndQueries
             sFactory = null;
         }
 
+        private static void BuildSchema(Configuration config)
+        {
+            if (File.Exists(FilePath)) File.Delete(FilePath);
+
+            var se = new SchemaExport(config);
+            se.Create(false, true);
+        }
+
+      
+
 
     }
 
@@ -155,6 +248,7 @@ namespace DatabaseAndQueries
         MsSql2012,
         Oracle,
         PostGreSql,
-        SqlLite
+        SqlLite,
+        MSAccess
     }
 }
