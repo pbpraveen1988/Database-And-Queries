@@ -46,7 +46,6 @@ namespace DatabaseAndQueries
             {
                 using (NHibernate.ITransaction transaction = session.BeginTransaction())
                 {
-
                     try
                     {
                         int count = objList.Count();
@@ -395,5 +394,9 @@ namespace DatabaseAndQueries
                 }
             }
         }
+
+        
+
+ 
     }
 }
